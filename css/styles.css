@@ -44,16 +44,13 @@ ul {
     border-bottom: 1px solid #ECECEC;
 }
 
-.container {
+.header-container {
+    display: flex;
     width: 1200px;
     padding-right: 15px;
     padding-left: 15px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.flex-hed {
-    display: flex;
 }
 
 .logot {
@@ -80,6 +77,7 @@ ul {
 }
 
 .flex-hed-ul {
+
     display: flex;
     padding-left: 0;
     padding-top: 32px;
@@ -87,23 +85,38 @@ ul {
     gap: 50px;
 }
 
-.link-flex {
+.heder-link {
+    position: relative;
+
     padding-left: 0;
     padding-top: 32px;
     padding-bottom: 32px;
-}
-
-.link {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--brand-color);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link:hover,
-.link:focus {
+.heder-link:hover,
+.heder-link:focus {
     color: #2196F3;
+}
+
+.heder-link::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    bottom: calc(0px - 1px);
+
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #2196F3;
+    border-radius: 2px;
 }
 
 .flex-hed-contacts {
@@ -124,6 +137,8 @@ ul {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: #757575;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts:hover,
@@ -151,6 +166,14 @@ ul {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.container {
+    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section {
@@ -186,11 +209,12 @@ ul {
     border-radius: 4px;
 
     cursor: pointer;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-button:hover,
 .link-button:focus {
-    color: #FFFFFF;
     background-color: #188CE8;
 }
 
@@ -240,11 +264,7 @@ ul {
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-
-    
 }
-
-
 
 .section-features {
     padding-top: 94px;
@@ -398,6 +418,9 @@ ul {
     
     border-radius: 50%;
     fill: #AFB1B8;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-link:hover,
@@ -430,6 +453,8 @@ ul {
     
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-li:hover,
@@ -446,6 +471,8 @@ ul {
     height: 92px;
 
     fill: #AFB1B8;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-a:hover,
@@ -475,6 +502,10 @@ ul {
     border-radius: 4px;
 
     cursor: pointer;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-but:hover,
@@ -585,6 +616,8 @@ ul {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-f:hover,
@@ -641,11 +674,12 @@ ul {
 
     fill: #fff;
     background-color: #44454E;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-link-f:hover,
 .icon-link-f:focus {
-    fill: #FFFFFF;
     background-color: #2196F3;
 }
 
